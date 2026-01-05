@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمد - رزومه و نمونه کارها</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محمد - رزومه و نمونه کارها</title>
 
-    <!-- سبک‌ها -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- سبک‌ها -->
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Lightbox CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/simplelightbox/dist/simple-lightbox.min.css" rel="stylesheet">
+<!-- Lightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/simplelightbox/dist/simple-lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -82,10 +82,10 @@
 <section id="contact">
     <div class="container">
         <h2>تماس با من</h2>
-        <form>
-            <input type="text" placeholder="نام شما" required>
-            <input type="email" placeholder="ایمیل" required>
-            <textarea placeholder="پیام شما" required></textarea>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="text" name="name" placeholder="نام شما" required>
+            <input type="email" name="email" placeholder="ایمیل" required>
+            <textarea name="message" placeholder="پیام شما" required></textarea>
             <button type="submit">ارسال</button>
         </form>
     </div>

@@ -1,9 +1,11 @@
-// فرم
+// فرم تماس Netlify
 const form = document.querySelector("form");
 form.addEventListener("submit", function(e){
     e.preventDefault();
-    alert("پیام شما با موفقیت ارسال شد!");
-    form.reset();
+    const formData = new FormData(form);
+    fetch("/", { method:"POST", body:formData })
+    .then(()=> { alert("پیام شما با موفقیت ارسال شد!"); form.reset(); })
+    .catch((err)=> alert("مشکلی پیش آمد: "+err));
 });
 
 // افکت اسکرول برای بخش‌ها
@@ -17,5 +19,5 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// Lightbox برای گالری
-const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+// گالری Lightbox
+const lightbox = new SimpleLightbox('.gallery a');
